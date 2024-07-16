@@ -26,7 +26,7 @@ if (userBirthYear === null ) {
 let userCity = prompt("Вкажи місто в якому проживаєте?");
 let cityMess = '';
 if (userCity === null ){
-    alert("Шкода, що Ви не захотіли ввести своє місто");
+    alert("Шкода, що Ви не захотіли ввести своє місто.");
 } else if (!userCity.trim()){
     alert("Пустий рядок");
 } else {
@@ -36,13 +36,13 @@ if (userCity === null ){
         cityMess = "Ти живеш у столиці України.";
     break;
     case "Вашингтон":
-        cityMess = "Ти живеш у столиці США";
+        cityMess = "Ти живеш у столиці США.";
     break;
     case "Лондон":
         cityMess = "Ти живеш у столиці Великої Британії.";
     break;
     default:
-        cityMess = `Ти живеш у ${userCity}`;
+        cityMess = `Ти живеш у ${userCity}.`;
     }
 }
 
@@ -50,9 +50,9 @@ if (userCity === null ){
 const userSport = prompt("Введи назву улюбленого виду спорту.");
 let sportMess = ""
 if (userSport === null ){
-    alert("Шкода, що Ви не захотіли ввести свій улюблений спорт")  
+    alert("Шкода, що Ви не захотіли ввести свій улюблений спорт.")  
 } else if (!userSport.trim()){
-    alert("Пустий рядок")
+    alert("Пустий рядок.")
 }else{
         switch(userSport.trim().toLowerCase()){
         case "бокс":
@@ -71,7 +71,7 @@ if (userSport === null ){
 
 alert( `
 Результати:
-${ageMess}
-${cityMess}
-${sportMess}
+${ageMess ? ageMess : "Шкода, що Ви не захотіли ввести свою дату народження"}
+${cityMess ? cityMess : "Шкода, що Ви не захотіли ввести своє місто"}
+${sportMess ? sportMess : "Шкода, що Ви не захотіли ввести свій улюблений спорт"}
 `)
