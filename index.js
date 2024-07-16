@@ -50,28 +50,28 @@ if (userCity === null ){
 const userSport = prompt("Введи назву улюбленого виду спорту.");
 let sportMess = ""
 if (userSport === null ){
-    alert("Шкода, що Ви не захотіли ввести свій улюблений спорт.")  
+    alert("Шкода, що Ви не захотіли ввести свій улюблений спорт.");
 } else if (!userSport.trim()){
     alert("Пустий рядок.")
 }else{
         switch(userSport.trim().toLowerCase()){
         case "бокс":
-            sportMess = "Круто! Хочеш стати як Усик?"
+            sportMess = "Круто! Хочеш стати як Усик?";
         break;
         case "футбол":
-            sportMess = "Круто! Хочеш стати як Рональдо?"
+            sportMess = "Круто! Хочеш стати як Рональдо?";
         case "баскетбол":
-            sportMess = "Круто! Хочеш стати як Джордан?"
+            sportMess = "Круто! Хочеш стати як Джордан?";
         break;
         default:
-           sportMess = `Твій улюблений вид спорту - ${userSport.trim()}`
+           sportMess = `Твій улюблений вид спорту - ${userSport.trim()}.`
         
         } 
 }
 
 alert( `
 Результати:
-${ageMess ? ageMess : "Шкода, що Ви не захотіли ввести свою дату народження"}
-${cityMess ? cityMess : "Шкода, що Ви не захотіли ввести своє місто"}
-${sportMess ? sportMess : "Шкода, що Ви не захотіли ввести свій улюблений спорт"}
+${ageMess ? ageMess : "Шкода, що Ви не захотіли ввести свою дату народження."}
+${cityMess ? cityMess : "Шкода, що Ви не захотіли ввести своє місто."}
+${sportMess ? sportMess : "Шкода, що Ви не захотіли ввести свій улюблений спорт."}
 `)
